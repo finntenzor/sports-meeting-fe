@@ -3,8 +3,11 @@
     <Navigator @open="sideNavigator.open = !sideNavigator.open"/>
     <Banner/>
     <SideNavigator :open.sync="sideNavigator.open"/>
-    <mu-container>
+    <div class="home-page-second">
       <GoldTops/>
+      <GameArrangement/>
+    </div>
+    <mu-container>
       <div class="home-page-space"></div>
       <flash-message-list ref="flashMessageList"/>
     </mu-container>
@@ -17,6 +20,7 @@ import Navigator from './components/Navigator'
 import SideNavigator from './components/SideNavigator'
 import Banner from './components/Banner'
 import GoldTops from './components/GoldTops'
+import GameArrangement from './components/GameArrangement'
 import axios, { setFlashMessageDisplayer } from './axios'
 
 export default {
@@ -25,7 +29,8 @@ export default {
     Navigator,
     SideNavigator,
     Banner,
-    GoldTops
+    GoldTops,
+    GameArrangement
   },
   data () {
     return {
@@ -53,5 +58,9 @@ body {
 .home-page-space {
   height: 300px;
   width: 100%;
+}
+.home-page-second {
+  background-color: #fff;
+  padding-top: 20px;
 }
 </style>
