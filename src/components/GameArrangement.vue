@@ -64,6 +64,8 @@ export default {
 }
 .game-arrangement-hr {
   margin: 0 60px;
+  border: none;
+  border-bottom: 2px solid #000;
 }
 .game-arrangement-list li {
   margin: 4px auto;
