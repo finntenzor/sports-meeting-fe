@@ -37,7 +37,7 @@ export default {
 <style>
 .gold-tops {
   margin: 20px auto 0;
-  max-width: 200px;
+  max-width: 240px;
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 2px 2px 12px #999;

@@ -16,7 +16,7 @@ export default {
 
 <style>
 .banner {
-  height: 240px;
+  height: 200px;
   padding-top: 20px;
   background: url("../../img/banner.jpg");
   background-size: auto 200px;
