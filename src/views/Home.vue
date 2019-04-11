@@ -1,8 +1,6 @@
 <template>
   <div class="home-page">
-    <Navigator @open="sideNavigator.open = !sideNavigator.open"/>
-    <Banner/>
-    <SideNavigator :open.sync="sideNavigator.open"/>
+    <MainHeader/>
     <section class="home-page-main-section">
       <GoldTops/>
       <flash-message-list ref="flashMessageList"/>
@@ -16,9 +14,7 @@
 <script>
 import { mapActions } from 'vuex'
 import FlashMessageList from '../components/FlashMessageList'
-import Navigator from '../components/Navigator'
-import SideNavigator from '../components/SideNavigator'
-import Banner from '../components/Banner'
+import MainHeader from '../components/MainHeader'
 import GoldTops from '../components/GoldTops'
 import GameArrangement from '../components/GameArrangement'
 import GameNews from '../components/GameNews'
@@ -29,25 +25,14 @@ export default {
   name: 'PageHome',
   components: {
     FlashMessageList,
-    Navigator,
-    SideNavigator,
-    Banner,
+    MainHeader,
     GoldTops,
     GameArrangement,
     GameNews,
     GameRanking
   },
-  data () {
-    return {
-      sideNavigator: {
-        open: false
-      }
-    }
-  },
   mounted () {
     this.fetchData()
-    // setFlashMessageDisplayer(this.$refs.flashMessageList.handleReceiveFlashMessage)
-    // axios('/games')
   },
   methods: {
     ...mapActions({
