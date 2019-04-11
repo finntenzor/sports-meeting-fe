@@ -2,34 +2,23 @@
   <div class="gold-tops">
     <div class="gold-tops-header">金牌排名</div>
     <ul class="gold-tops-list">
-      <li v-for="(item, i) in list" :key="i" class="gold-tops-item">
-        <p class="gold-tops-item-line1">No.{{ i + 1 }}：{{ item.count }}枚</p>
-        <p class="gold-tops-item-line2">{{ item.name }}书院</p>
+      <li v-for="(item, i) in teamsRankedGolden" :key="i" class="gold-tops-item">
+        <p class="gold-tops-item-line1">No.{{ i + 1 }}：{{ item.golden_count + item.golden_s_count }}枚</p>
+        <p class="gold-tops-item-line2">{{ item.name }}</p>
       </li>
     </ul>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'GoldTops',
-  data () {
-    return {
-      list: [
-        {
-          count: 30,
-          name: '某某'
-        },
-        {
-          count: 30,
-          name: '某某'
-        },
-        {
-          count: 30,
-          name: '某某'
-        },
-      ]
-    }
+  computed: {
+    ...mapGetters({
+      teamsRankedGolden: 'teamsRankedGolden'
+    })
   }
 }
 </script>

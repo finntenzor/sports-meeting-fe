@@ -1,50 +1,15 @@
 <template>
   <div id="app">
-    <Navigator @open="sideNavigator.open = !sideNavigator.open"/>
-    <Banner/>
-    <SideNavigator :open.sync="sideNavigator.open"/>
-    <section class="home-page-main-section">
-      <GoldTops/>
-      <flash-message-list ref="flashMessageList"/>
-      <GameArrangement/>
-      <GameNews/>
-      <GameRanking/>
-    </section>
+    <Home />
+    <!-- <router-view /> -->
   </div>
 </template>
 
 <script>
-import FlashMessageList from './components/FlashMessageList'
-import Navigator from './components/Navigator'
-import SideNavigator from './components/SideNavigator'
-import Banner from './components/Banner'
-import GoldTops from './components/GoldTops'
-import GameArrangement from './components/GameArrangement'
-import GameNews from './components/GameNews'
-import GameRanking from './components/GameRanking'
-import axios, { setFlashMessageDisplayer } from './axios'
-
+import Home from './views/Home'
 export default {
   components: {
-    FlashMessageList,
-    Navigator,
-    SideNavigator,
-    Banner,
-    GoldTops,
-    GameArrangement,
-    GameNews,
-    GameRanking
-  },
-  data () {
-    return {
-      sideNavigator: {
-        open: false
-      }
-    }
-  },
-  mounted () {
-    setFlashMessageDisplayer(this.$refs.flashMessageList.handleReceiveFlashMessage)
-    axios('/games')
+    Home
   }
 }
 </script>
@@ -57,13 +22,5 @@ export default {
 }
 body {
   background-color: #f2f2f2;
-}
-.home-page-space {
-  height: 300px;
-  width: 100%;
-}
-.home-page-main-section {
-  padding-top: 20px;
-  background-color: #fff;
 }
 </style>
