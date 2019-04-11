@@ -19,7 +19,6 @@ import GoldTops from '../components/GoldTops'
 import GameArrangement from '../components/GameArrangement'
 import GameNews from '../components/GameNews'
 import GameRanking from '../components/GameRanking'
-// import axios, { setFlashMessageDisplayer } from '../axios'
 
 export default {
   name: 'PageHome',
