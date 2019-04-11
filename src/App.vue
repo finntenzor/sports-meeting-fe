@@ -3,13 +3,13 @@
     <Navigator @open="sideNavigator.open = !sideNavigator.open"/>
     <Banner/>
     <SideNavigator :open.sync="sideNavigator.open"/>
-    <div class="home-page-second">
+    <section class="home-page-main-section">
       <flash-message-list ref="flashMessageList"/>
       <GoldTops/>
       <GameArrangement/>
       <GameNews/>
       <GameRanking/>
-    </div>
+    </section>
   </div>
 </template>
 
@@ -62,8 +62,7 @@ body {
   height: 300px;
   width: 100%;
 }
-.home-page-second {
+.home-page-main-section {
   background-color: #fff;
-  padding-top: 20px;
 }
 </style>

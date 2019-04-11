@@ -7,7 +7,9 @@ const backend = {
 module.exports = {
   devServer: {
     proxy: {
-      '/games': backend
+      '/games': backend,
+      '/news': backend,
+      '/teams': backend
     }
   }
 }
