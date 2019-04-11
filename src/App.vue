@@ -4,8 +4,8 @@
     <Banner/>
     <SideNavigator :open.sync="sideNavigator.open"/>
     <section class="home-page-main-section">
-      <flash-message-list ref="flashMessageList"/>
       <GoldTops/>
+      <flash-message-list ref="flashMessageList"/>
       <GameArrangement/>
       <GameNews/>
       <GameRanking/>
@@ -63,6 +63,7 @@ body {
   width: 100%;
 }
 .home-page-main-section {
+  padding-top: 20px;
   background-color: #fff;
 }
 </style>
